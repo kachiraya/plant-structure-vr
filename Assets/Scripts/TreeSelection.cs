@@ -23,6 +23,7 @@ public class TreeSelection : MonoBehaviour {
 	private NotiCanvasHandler notiCanvasHandler;
 	private Component halo;
 	private string[] treeNames = {"ต้นข้าวโพด", "ต้นมะม่วง", "ต้นเข็ม", "ต้นกล้วย", "ต้นปาล์ม", "ต้นพริก", "ดอกชบา", "ต้นมะขาม"};
+	private int currentIndex = -1;
 
 	void Start() {
 		notiCanvasHandler = notiCanvas.GetComponent<NotiCanvasHandler> ();
@@ -56,8 +57,8 @@ public class TreeSelection : MonoBehaviour {
 			//m_Renderer.material = m_OverMaterial;
 			Debug.Log ("Show over state " + this.name);
 			halo.GetType().GetProperty("enabled").SetValue(halo, true, null);
-			int index = int.Parse ("" + this.name.ToCharArray () [this.name.Length - 1]) - 1;
-			nameToDisplay = treeNames [index];
+			currentIndex = int.Parse ("" + this.name.ToCharArray () [this.name.Length - 1]) - 1;
+			nameToDisplay = treeNames [currentIndex];
 
 			notiCanvasHandler.SetTextName(nameToDisplay);
 			notiCanvasHandler.SetPanelDisplayActive(true);
@@ -83,12 +84,11 @@ public class TreeSelection : MonoBehaviour {
 	private void HandleClick()
 	{
 		Debug.Log("Show click state");
-
-
 		if (!notiCanvasHandler.isClicked) {
 			CameraHandler camHandlerScript = m_Camera.GetComponent<CameraHandler>();
 			camHandlerScript.AnimationFalse ();
 			notiCanvasHandler.SetPanelInfoActive (true);
+			notiCanvasHandler.SetFirstInfoImage (currentIndex);
 		}
 
 //		m_Renderer.material = m_ClickedMaterial;
