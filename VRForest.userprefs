@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TreeSelection.cs">
+    <Files>
+      <File FileName="Assets/Scripts/TreeSelection.cs" Line="30" Column="3" />
+      <File FileName="Assets/NotiCanvasHandler.cs" Line="22" Column="23" />
+      <File FileName="Assets/Scripts/CameraHandler.cs" Line="7" Column="27" />
+      <File FileName="Assets/Scripts/VRRaycaster.cs" Line="12" Column="2" />
+      <File FileName="Assets/Scripts/VRInput.cs" Line="21" Column="2" />
+      <File FileName="Assets/Scripts/VRInteractiveItem.cs" Line="33" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
